@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBPass | Dompet Password & File Anti Hack</title>
+    <title>GBPass | Safe Password & File Wallet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,8 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        sosmedBlue: '#1877F2', /* Warna mirip FB/IG */
-                        sosmedDark: '#121212'
+                        sosmedBlue: '#1877F2',
                     }
                 }
             }
@@ -25,133 +24,186 @@
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
 
-    <nav class="sticky top-0 z-50 bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 px-4 py-3 flex justify-between items-center max-w-md mx-auto shadow-sm">
-        <div class="text-xl font-bold text-sosmedBlue tracking-wide">✨ GBPass</div>
-        <div class="flex items-center gap-3">
-            <button onclick="toggleTheme()" class="text-lg bg-gray-200 dark:bg-zinc-800 p-2 rounded-full">🌓</button>
-            <a href="#harga" class="bg-sosmedBlue text-white text-xs font-bold px-4 py-2 rounded-full hover:opacity-90">Beli Pro</a>
+    <nav class="sticky top-0 z-50 bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 px-4 py-3 shadow-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-sosmedBlue tracking-wide">✨ GBPass</div>
+            <div class="flex items-center gap-2 sm:gap-4">
+                <button onclick="gantiBahasa()" id="btnLang" class="text-xs font-bold bg-blue-100 text-sosmedBlue dark:bg-zinc-800 dark:text-white px-3 py-1.5 rounded-full">
+                    🌐 EN
+                </button>
+                <button onclick="toggleTheme()" class="text-sm bg-gray-200 dark:bg-zinc-800 p-2 rounded-full">🌓</button>
+                <a href="#harga" id="navBuyBtn" class="bg-sosmedBlue text-white text-xs font-bold px-4 py-2 rounded-full hover:opacity-90">Beli Pro</a>
+            </div>
         </div>
     </nav>
 
-    <main class="max-w-md mx-auto pb-24 bg-white dark:bg-zinc-900 min-height-screen shadow-xl">
+    <main class="max-w-4xl mx-auto my-0 sm:my-6 p-0 sm:p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="border-b border-gray-200 dark:border-zinc-800 p-4">
-            <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">🙋‍♂️</div>
-                <div>
-                    <div class="text-sm font-bold">Kamu Sering Lupa Password?</div>
-                    <div class="text-xs text-gray-500">Baru saja diposting</div>
-                </div>
-            </div>
-            <p class="text-sm leading-relaxed mb-3">
-                Mau masuk Instagram atau Facebook tapi lupa sandinya terus? Bikin baru lagi, lupa lagi. Capek kan? Pakai <b>GBPass</b> aja, tinggal klik langsung masuk otomatis tanpa ngetik! ⚡
-            </p>
-            <div class="bg-gray-100 dark:bg-zinc-800 rounded-xl p-3 text-xs text-gray-600 dark:text-gray-400 border-l-4 border-sosmedBlue">
-                📌 <b>Fitur Autofill:</b> Bisa langsung masuk ke IG, Tiktok, dan Google Chrome lewat HP kamu.
-            </div>
-        </div>
-
-        <div class="border-b border-gray-200 dark:border-zinc-800 p-4 bg-blue-50/50 dark:bg-zinc-900/50">
-            <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">🔒</div>
-                <div>
-                    <div class="text-sm font-bold">Teknologi Gembok Ajaib (Zero-Knowledge)</div>
-                    <div class="text-xs text-gray-500">Sponsor Keamanan 5.0</div>
-                </div>
-            </div>
-            <p class="text-sm leading-relaxed mb-3">
-                Hebatnya GBPass, kami yang bikin aplikasi pun <b>GAK BISA</b> ngintip password kamu. Semua dikunci di HP kamu sendiri. Jadi, kalau ada hacker mau jebol, mereka bakal pusing tujuh keliling! Aman 100%.
-            </p>
-        </div>
-
-        <div class="border-b border-gray-200 dark:border-zinc-800 p-4">
-            <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">📂</div>
-                <div>
-                    <div class="text-sm font-bold">Bisa Simpan Rahasia (Video & Dokumen)</div>
-                    <div class="text-xs text-gray-500">Fitur Canggih</div>
-                </div>
-            </div>
-            <p class="text-sm leading-relaxed mb-3">
-                Bukan cuma password, kamu bisa simpan foto/video rahasia, file PDF, atau Word di dalam aplikasi. Kerennya, bisa langsung ditonton dan dibaca di dalam aplikasi tanpa perlu aplikasi tambahan (Preview). Plus ada <b>Rich Note</b> buat nulis catatan harian kamu dengan rapi.
-            </p>
-        </div>
-
-        <section id="harga" class="p-4 bg-gray-50 dark:bg-zinc-900/80">
-            <h2 class="text-lg font-bold text-center mb-4">Pilih Paket Sesuai Kebutuhanmu 👇</h2>
+        <div class="md:col-span-2 space-y-4 bg-white dark:bg-zinc-900 p-4 shadow-sm sm:rounded-2xl">
             
-            <div class="space-y-4">
-                <div class="bg-white dark:bg-zinc-800 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 shadow-sm">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="font-bold text-sm">Paket Guest (Gratis)</span>
-                        <span class="text-xs bg-gray-200 dark:bg-zinc-700 px-2 py-1 rounded">Rp 0</span>
+            <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
+                <h2 id="txtPost1Title" class="text-base font-bold text-gray-800 dark:text-white mb-2">Kamu Sering Lupa Password?</h2>
+                <p id="txtPost1Desc" class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                    Mau masuk Instagram atau Facebook tapi lupa sandinya terus? Bikin baru lagi, lupa lagi. Capek kan? Pakai <b>GBPass</b> aja, tinggal klik langsung masuk otomatis tanpa mengetik ulang! ⚡
+                </p>
+                <span class="text-[11px] bg-blue-50 dark:bg-zinc-800 text-sosmedBlue font-semibold px-3 py-1 rounded-full">#SmartAutofill</span>
+            </div>
+
+            <div class="border-b border-gray-100 dark:border-zinc-800 pb-4 pt-2">
+                <h2 id="txtPost2Title" class="text-base font-bold text-gray-800 dark:text-white mb-2">🛡️ Gembok Ajaib (Zero-Knowledge)</h2>
+                <p id="txtPost2Desc" class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Hebatnya GBPass, kami yang membuat aplikasi pun <b>TIDAK BISA</b> mengintip sandi kamu. Semua data dikunci aman di HP kamu sendiri menggunakan sistem enkripsi tingkat tinggi.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <h2 id="txtVideoTitle" class="text-base font-bold text-gray-800 dark:text-white mb-3">📺 Fitur Preview Video & Dokumen</h2>
+                
+                <div class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-inner mb-4 relative">
+                    <iframe id="videoPlayer" class="w-full h-full" src="" allow="autoplay" allowfullscreen></iframe>
+                    <div id="videoPlaceholder" class="absolute inset-0 bg-zinc-800 flex items-center justify-center text-center p-4 text-xs text-gray-400">
+                        ⏳ Memuat daftar video dari Google Sheet...
                     </div>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Cocok untuk coba-coba. Bisa dibuka di semua HP (Unlimited Devices) dengan kapasitas simpan file sebesar 10 MB.</p>
-                    <button onclick="prosesBeli('Guest Free')" class="w-full bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-white text-xs font-bold py-2.5 rounded-xl transition active:scale-95">
-                        Daftar Gratis
-                    </button>
                 </div>
 
-                <div class="bg-white dark:bg-zinc-800 p-4 rounded-2xl border-2 border-sosmedBlue shadow-md relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-sosmedBlue text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">Paling Laris</div>
-                    <div class="flex justify-between items-center mb-1">
-                        <span class="font-bold text-sm text-sosmedBlue">Paket GBPass PRO ⭐</span>
-                        <span class="text-sm font-bold text-zinc-900 dark:text-white">$2.99 <span class="text-[10px] font-normal text-gray-500">/bln</span></span>
-                    </div>
-                    <div class="text-xs text-right text-gray-500 mb-2">atau hemat pakai tahunan $29.99 /tahun</div>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Kapasitas naik jadi <b>25 MB</b>. Bisa buka preview video, PDF, Word, dan bikin brankas rahasia (Organize Vault).</p>
-                    <button onclick="prosesBeli('PRO Premium')" class="w-full bg-sosmedBlue text-white text-xs font-bold py-2.5 rounded-xl shadow-md transition active:scale-95 hover:bg-blue-600">
-                        Klik Beli Sekarang
-                    </button>
+                <div class="space-y-2">
+                    <div id="txtPlaylistTitle" class="text-xs font-bold text-gray-500 uppercase">Daftar Putar Video:</div>
+                    <div id="containerDaftarVideo" class="max-h-40 overflow-y-auto space-y-2 pr-1">
+                        </div>
                 </div>
             </div>
-        </section>
-        
-        <footer class="text-center text-[11px] text-gray-400 mt-8">
-            <p>&copy; 2026 GBPass.net - Privasi Kamu Aman Bersama Kami</p>
-        </footer>
+
+        </div>
+
+        <div class="space-y-4 p-4 sm:p-0">
+            <div class="bg-white dark:bg-zinc-800 p-5 rounded-2xl border-2 border-sosmedBlue shadow-md relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-sosmedBlue text-white text-[9px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">Best Seller</div>
+                
+                <h3 class="font-bold text-base text-sosmedBlue mb-1">GBPass PRO Plan ⭐</h3>
+                <div class="text-xl font-extrabold mb-1 text-zinc-900 dark:text-white">$2.99 <span class="text-xs font-normal text-gray-400">/bulan</span></div>
+                <div class="text-[10px] text-gray-400 mb-4">*atau $29.99 untuk langganan 1 Tahun</div>
+                
+                <ul class="text-xs space-y-2.5 text-gray-600 dark:text-gray-300 mb-6">
+                    <li>✅ Unlimited Devices (HP & Laptop)</li>
+                    <li>✅ Kuota Simpan File besar 25 MB</li>
+                    <li>✅ Bisa Buka Video & Catatan Keren</li>
+                    <li>✅ Atur Folder Brankas Pribadi</li>
+                </ul>
+
+                <button onclick="prosesBeli('GBPass PRO Premium')" id="btnBuy" class="w-full bg-sosmedBlue text-white text-xs font-bold py-3 rounded-xl shadow-md transition active:scale-95 hover:bg-blue-600">
+                    Klik Beli Sekarang 🚀
+                </button>
+            </div>
+        </div>
     </main>
 
     <script>
-        // Fungsi ganti tema gelap/terang
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
+        // MASUKKAN URL GOOGLE APPS SCRIPT ANDA DI SINI
+        const URL_APPSCRIPT = "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"; 
+
+        let bahasaSekarang = "ID";
+        const teksBahasa = {
+            ID: {
+                btnLang: "🌐 EN", navBuy: "Beli Pro",
+                p1Title: "Kamu Sering Lupa Password?", p1Desc: "Mau masuk Instagram atau Facebook tapi lupa sandinya terus? Bikin baru lagi, lupa lagi. Capek kan? Pakai GBPass aja, tinggal klik langsung masuk otomatis tanpa mengetik ulang! ⚡",
+                p2Title: "🛡️ Gembok Ajaib (Zero-Knowledge)", p2Desc: "Hebatnya GBPass, kami yang membuat aplikasi pun TIDAK BISA mengintip sandi kamu. Semua data dikunci aman di HP kamu sendiri menggunakan sistem enkripsi tingkat tinggi.",
+                vidTitle: "📺 Fitur Preview Video & Dokumen", playTitle: "Daftar Putar Video:", btnBuy: "Klik Beli Sekarang 🚀"
+            },
+            EN: {
+                btnLang: "🌐 ID", navBuy: "Buy Pro",
+                p1Title: "Do you often forget passwords?", p1Desc: "Want to log into Instagram or Facebook but keep forgetting your password? Creating new ones and forgetting again? Use GBPass, log in instantly with one click without re-typing! ⚡",
+                p2Title: "🛡️ Magic Lock (Zero-Knowledge)", p2Desc: "The greatness of GBPass is that even we, the creators, CANNOT see your password. All data is securely locked on your own device using high-level encryption.",
+                vidTitle: "📺 Video & Document Preview Feature", playTitle: "Video Playlist:", btnBuy: "Click Buy Now 🚀"
+            }
+        };
+
+        function gantiBahasa() {
+            bahasaSekarang = (bahasaSekarang === "ID") ? "EN" : "ID";
+            const data = teksBahasa[bahasaSekarang];
+            
+            document.getElementById("btnLang").innerText = data.btnLang;
+            document.getElementById("navBuyBtn").innerText = data.navBuy;
+            document.getElementById("txtPost1Title").innerText = data.p1Title;
+            document.getElementById("txtPost1Desc").innerHTML = data.p1Desc;
+            document.getElementById("txtPost2Title").innerText = data.p2Title;
+            document.getElementById("txtPost2Desc").innerText = data.p2Desc;
+            document.getElementById("txtVideoTitle").innerText = data.vidTitle;
+            document.getElementById("txtPlaylistTitle").innerText = data.playTitle;
+            document.getElementById("btnBuy").innerText = data.btnBuy;
         }
 
-        // Fungsi utama melacak IP & simpan data pembelian
+        function toggleTheme() { document.documentElement.classList.toggle('dark'); }
+
+        // MENGUBAH LINK BERBAGI GOOGLE DRIVE MENJADI LINK STREAMING DILAYAR UTAMA
+        function formatLinkDrive(url) {
+            const match = url.match(/\/d\/([^/]+)/);
+            if (match && match[1]) {
+                return `https://drive.google.com/file/d/${match[1]}/preview`;
+            }
+            return url;
+        }
+
+        // AMBIL DATA VIDEO DARI GOOGLE SHEET OTOMATIS SAAT WEB DIBUKA
+        async function muatDaftarVideo() {
+            if(URL_APPSCRIPT.includes("XXXXXXXXXXXX")) return;
+            try {
+                const respon = await fetch(URL_APPSCRIPT);
+                const daftarVideo = await respon.json();
+                
+                const container = document.getElementById("containerDaftarVideo");
+                const placeholder = document.getElementById("videoPlaceholder");
+                container.innerHTML = "";
+
+                if(daftarVideo.length > 0) {
+                    placeholder.classList.add("hidden");
+                    
+                    // Putar video pertama otomatis di awal
+                    document.getElementById("videoPlayer").src = formatLinkDrive(daftarVideo[0].link);
+
+                    daftarVideo.forEach((video, index) => {
+                        const btn = document.createElement("button");
+                        btn.className = "w-full text-left p-2.5 text-xs bg-gray-50 dark:bg-zinc-800 rounded-xl hover:bg-blue-50 dark:hover:bg-zinc-700 block truncate font-medium border border-gray-200 dark:border-zinc-700 transition active:scale-95";
+                        btn.innerHTML = `▶️ ${video.nama}`;
+                        btn.onclick = () => {
+                            document.getElementById("videoPlayer").src = formatLinkDrive(video.link);
+                        };
+                        container.appendChild(btn);
+                    });
+                } else {
+                    placeholder.innerText = "Belum ada video di Google Sheet.";
+                }
+            } catch (e) {
+                console.error(e);
+                document.getElementById("videoPlaceholder").innerText = "Gagal memuat video.";
+            }
+        }
+
+        // FUNGSI PROSES BELI + CHAT IP ADDRESS
         async function prosesBeli(namaPaket) {
-            // GANTI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA SETELAH DEPLOY
-            const URL_APPSCRIPT = "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"; 
-            
             if(URL_APPSCRIPT.includes("XXXXXXXXXXXX")) {
-                alert("Halo! Aplikasi web siap, silakan pasang URL AppScript Anda di dalam kode untuk mulai menyimpan data.");
+                alert("Silakan pasang URL Apps Script Anda terlebih dahulu di dalam kode script ya!");
                 return;
             }
-
             try {
-                // 1. Ambil IP Address pembeli secara diam-diam lewat internet
                 const dapatkanIP = await fetch('https://api.ipify.org?format=json');
                 const dataIP = await dapatkanIP.json();
                 const ipPengunjung = dataIP.ip;
 
-                // 2. Kirim data paket dan IP pembeli ke Google Spreadsheet lewat AppScript
                 await fetch(URL_APPSCRIPT, {
                     method: 'POST',
-                    mode: 'no-cors', // Menghindari masalah error CORS di Vercel/Browser
+                    mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        paket: namaPaket,
-                        ip: ipPengunjung
-                    })
+                    body: JSON.stringify({ paket: namaPaket, ip: ipPengunjung })
                 });
 
-                // 3. Notifikasi Sukses yang ramah untuk user awam
-                alert("Terima kasih! Pembelian " + namaPaket + " Anda sedang dicatat oleh sistem aman kami.");
+                alert(bahasaSekarang === "ID" ? "Sukses! Pembelian Anda sedang diproses sistem." : "Success! Your purchase is being processed by the system.");
             } catch (error) {
-                console.error("Gagal mencatat:", error);
-                alert("Koneksi sibuk, silakan klik tombol beli sekali lagi ya kak!");
+                alert("Koneksi sibuk, silakan coba lagi.");
             }
         }
+
+        // Jalankan pemuatan video saat halaman selesai dibuka
+        window.onload = muatDaftarVideo;
     </script>
 </body>
 </html>
