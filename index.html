@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault | Zero-Knowledge Password Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-bold text-primary">SecureVault</div>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
+                🌓 Theme
+            </button>
+            <a href="#pricing" class="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center py-20 px-4">
+        <h1 class="text-5xl font-extrabold mb-6">Privasi Anda, Sepenuhnya Milik Anda.</h1>
+        <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+            Aplikasi pengelola password <b>Zero-Knowledge</b>. Dilengkapi Autofill cerdas, penyimpanan file, dan Rich Notes. Semua terenkripsi, di semua gadget Anda.
+        </p>
+        <button class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 transition transform">
+            Coba Gratis Sekarang
+        </button>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Dirancang untuk Kesederhanaan & Keamanan 5.0</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 border dark:border-gray-700 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">🛡️ Zero-Knowledge</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Data Anda dienkripsi sebelum meninggalkan perangkat. Kami tidak bisa melihat, membagikan, atau menjual data Anda.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 border dark:border-gray-700 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">⚡ Smart Autofill</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Login instan ke Instagram, web browser, dan aplikasi favorit Anda tanpa perlu mengetik manual.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 border dark:border-gray-700 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">📄 File Preview & Rich Notes</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Simpan PDF, Word, atau video langsung di dalam Vault. Baca dan tinjau tanpa aplikasi pihak ketiga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Harga Sederhana, Akses Tanpa Batas (Unlimited Devices)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Free Plan -->
+                <div class="p-8 border-2 border-gray-200 dark:border-gray-700 rounded-2xl text-center">
+                    <h3 class="text-2xl font-bold mb-4">Guest</h3>
+                    <div class="text-4xl font-extrabold mb-6">$0<span class="text-lg font-normal text-gray-500">/selamanya</span></div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li>✅ Unlimited Devices</li>
+                        <li>✅ Zero-Knowledge Encryption</li>
+                        <li>✅ Smart Autofill</li>
+                        <li>✅ 10 MB File Storage</li>
+                    </ul>
+                    <button class="w-full border-2 border-primary text-primary py-3 rounded-full font-bold">Daftar Guest</button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="p-8 border-2 border-primary bg-primary bg-opacity-5 rounded-2xl text-center relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-sm px-3 py-1 rounded-bl-lg rounded-tr-lg">Paling Populer</div>
+                    <h3 class="text-2xl font-bold mb-4">Pro Plan</h3>
+                    <div class="text-4xl font-extrabold mb-2">$2.99<span class="text-lg font-normal text-gray-500">/bulan</span></div>
+                    <div class="text-sm text-gray-500 mb-6">atau $29.99 / tahun (Hemat 16%)</div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li>✅ <b>Semua fitur Guest</b></li>
+                        <li>✅ 25 MB File Storage</li>
+                        <li>✅ Rich Notes & Document Preview</li>
+                        <li>✅ Organize Vaults (Brankas Kustom)</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold shadow-lg">Upgrade ke Pro</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 border-t dark:border-gray-800 text-gray-500">
+        <p>&copy; 2026 SecureVault. Privasi Anda Terjamin.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
