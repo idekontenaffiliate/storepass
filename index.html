@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureVault | Zero-Knowledge Password Manager</title>
+    <title>GBPass | Dompet Password & File Anti Hack</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,103 +11,146 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3b82f6',
+                        sosmedBlue: '#1877F2', /* Warna mirip FB/IG */
+                        sosmedDark: '#121212'
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="bg-gray-100 text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
 
-    <!-- Navbar -->
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-bold text-primary">SecureVault</div>
-        <div class="flex items-center gap-4">
-            <button onclick="toggleTheme()" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
-                🌓 Theme
-            </button>
-            <a href="#pricing" class="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition">Get Started</a>
+    <nav class="sticky top-0 z-50 bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 px-4 py-3 flex justify-between items-center max-w-md mx-auto shadow-sm">
+        <div class="text-xl font-bold text-sosmedBlue tracking-wide">✨ GBPass</div>
+        <div class="flex items-center gap-3">
+            <button onclick="toggleTheme()" class="text-lg bg-gray-200 dark:bg-zinc-800 p-2 rounded-full">🌓</button>
+            <a href="#harga" class="bg-sosmedBlue text-white text-xs font-bold px-4 py-2 rounded-full hover:opacity-90">Beli Pro</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="text-center py-20 px-4">
-        <h1 class="text-5xl font-extrabold mb-6">Privasi Anda, Sepenuhnya Milik Anda.</h1>
-        <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-            Aplikasi pengelola password <b>Zero-Knowledge</b>. Dilengkapi Autofill cerdas, penyimpanan file, dan Rich Notes. Semua terenkripsi, di semua gadget Anda.
-        </p>
-        <button class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 transition transform">
-            Coba Gratis Sekarang
-        </button>
-    </header>
-
-    <!-- Features Section -->
-    <section class="py-16 bg-white dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Dirancang untuk Kesederhanaan & Keamanan 5.0</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-6 border dark:border-gray-700 rounded-xl">
-                    <h3 class="text-xl font-bold mb-3">🛡️ Zero-Knowledge</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Data Anda dienkripsi sebelum meninggalkan perangkat. Kami tidak bisa melihat, membagikan, atau menjual data Anda.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="p-6 border dark:border-gray-700 rounded-xl">
-                    <h3 class="text-xl font-bold mb-3">⚡ Smart Autofill</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Login instan ke Instagram, web browser, dan aplikasi favorit Anda tanpa perlu mengetik manual.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="p-6 border dark:border-gray-700 rounded-xl">
-                    <h3 class="text-xl font-bold mb-3">📄 File Preview & Rich Notes</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Simpan PDF, Word, atau video langsung di dalam Vault. Baca dan tinjau tanpa aplikasi pihak ketiga.</p>
+    <main class="max-w-md mx-auto pb-24 bg-white dark:bg-zinc-900 min-height-screen shadow-xl">
+        
+        <div class="border-b border-gray-200 dark:border-zinc-800 p-4">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">🙋‍♂️</div>
+                <div>
+                    <div class="text-sm font-bold">Kamu Sering Lupa Password?</div>
+                    <div class="text-xs text-gray-500">Baru saja diposting</div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Harga Sederhana, Akses Tanpa Batas (Unlimited Devices)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Free Plan -->
-                <div class="p-8 border-2 border-gray-200 dark:border-gray-700 rounded-2xl text-center">
-                    <h3 class="text-2xl font-bold mb-4">Guest</h3>
-                    <div class="text-4xl font-extrabold mb-6">$0<span class="text-lg font-normal text-gray-500">/selamanya</span></div>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li>✅ Unlimited Devices</li>
-                        <li>✅ Zero-Knowledge Encryption</li>
-                        <li>✅ Smart Autofill</li>
-                        <li>✅ 10 MB File Storage</li>
-                    </ul>
-                    <button class="w-full border-2 border-primary text-primary py-3 rounded-full font-bold">Daftar Guest</button>
-                </div>
-                <!-- Pro Plan -->
-                <div class="p-8 border-2 border-primary bg-primary bg-opacity-5 rounded-2xl text-center relative">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-sm px-3 py-1 rounded-bl-lg rounded-tr-lg">Paling Populer</div>
-                    <h3 class="text-2xl font-bold mb-4">Pro Plan</h3>
-                    <div class="text-4xl font-extrabold mb-2">$2.99<span class="text-lg font-normal text-gray-500">/bulan</span></div>
-                    <div class="text-sm text-gray-500 mb-6">atau $29.99 / tahun (Hemat 16%)</div>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li>✅ <b>Semua fitur Guest</b></li>
-                        <li>✅ 25 MB File Storage</li>
-                        <li>✅ Rich Notes & Document Preview</li>
-                        <li>✅ Organize Vaults (Brankas Kustom)</li>
-                    </ul>
-                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold shadow-lg">Upgrade ke Pro</button>
-                </div>
+            <p class="text-sm leading-relaxed mb-3">
+                Mau masuk Instagram atau Facebook tapi lupa sandinya terus? Bikin baru lagi, lupa lagi. Capek kan? Pakai <b>GBPass</b> aja, tinggal klik langsung masuk otomatis tanpa ngetik! ⚡
+            </p>
+            <div class="bg-gray-100 dark:bg-zinc-800 rounded-xl p-3 text-xs text-gray-600 dark:text-gray-400 border-l-4 border-sosmedBlue">
+                📌 <b>Fitur Autofill:</b> Bisa langsung masuk ke IG, Tiktok, dan Google Chrome lewat HP kamu.
             </div>
         </div>
-    </section>
 
-    <footer class="text-center py-8 border-t dark:border-gray-800 text-gray-500">
-        <p>&copy; 2026 SecureVault. Privasi Anda Terjamin.</p>
-    </footer>
+        <div class="border-b border-gray-200 dark:border-zinc-800 p-4 bg-blue-50/50 dark:bg-zinc-900/50">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">🔒</div>
+                <div>
+                    <div class="text-sm font-bold">Teknologi Gembok Ajaib (Zero-Knowledge)</div>
+                    <div class="text-xs text-gray-500">Sponsor Keamanan 5.0</div>
+                </div>
+            </div>
+            <p class="text-sm leading-relaxed mb-3">
+                Hebatnya GBPass, kami yang bikin aplikasi pun <b>GAK BISA</b> ngintip password kamu. Semua dikunci di HP kamu sendiri. Jadi, kalau ada hacker mau jebol, mereka bakal pusing tujuh keliling! Aman 100%.
+            </p>
+        </div>
+
+        <div class="border-b border-gray-200 dark:border-zinc-800 p-4">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">📂</div>
+                <div>
+                    <div class="text-sm font-bold">Bisa Simpan Rahasia (Video & Dokumen)</div>
+                    <div class="text-xs text-gray-500">Fitur Canggih</div>
+                </div>
+            </div>
+            <p class="text-sm leading-relaxed mb-3">
+                Bukan cuma password, kamu bisa simpan foto/video rahasia, file PDF, atau Word di dalam aplikasi. Kerennya, bisa langsung ditonton dan dibaca di dalam aplikasi tanpa perlu aplikasi tambahan (Preview). Plus ada <b>Rich Note</b> buat nulis catatan harian kamu dengan rapi.
+            </p>
+        </div>
+
+        <section id="harga" class="p-4 bg-gray-50 dark:bg-zinc-900/80">
+            <h2 class="text-lg font-bold text-center mb-4">Pilih Paket Sesuai Kebutuhanmu 👇</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-zinc-800 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-sm">Paket Guest (Gratis)</span>
+                        <span class="text-xs bg-gray-200 dark:bg-zinc-700 px-2 py-1 rounded">Rp 0</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Cocok untuk coba-coba. Bisa dibuka di semua HP (Unlimited Devices) dengan kapasitas simpan file sebesar 10 MB.</p>
+                    <button onclick="prosesBeli('Guest Free')" class="w-full bg-gray-200 dark:bg-zinc-700 text-gray-800 dark:text-white text-xs font-bold py-2.5 rounded-xl transition active:scale-95">
+                        Daftar Gratis
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800 p-4 rounded-2xl border-2 border-sosmedBlue shadow-md relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-sosmedBlue text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">Paling Laris</div>
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-sm text-sosmedBlue">Paket GBPass PRO ⭐</span>
+                        <span class="text-sm font-bold text-zinc-900 dark:text-white">$2.99 <span class="text-[10px] font-normal text-gray-500">/bln</span></span>
+                    </div>
+                    <div class="text-xs text-right text-gray-500 mb-2">atau hemat pakai tahunan $29.99 /tahun</div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Kapasitas naik jadi <b>25 MB</b>. Bisa buka preview video, PDF, Word, dan bikin brankas rahasia (Organize Vault).</p>
+                    <button onclick="prosesBeli('PRO Premium')" class="w-full bg-sosmedBlue text-white text-xs font-bold py-2.5 rounded-xl shadow-md transition active:scale-95 hover:bg-blue-600">
+                        Klik Beli Sekarang
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center text-[11px] text-gray-400 mt-8">
+            <p>&copy; 2026 GBPass.net - Privasi Kamu Aman Bersama Kami</p>
+        </footer>
+    </main>
 
     <script>
+        // Fungsi ganti tema gelap/terang
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
+        }
+
+        // Fungsi utama melacak IP & simpan data pembelian
+        async function prosesBeli(namaPaket) {
+            // GANTI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA SETELAH DEPLOY
+            const URL_APPSCRIPT = "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"; 
+            
+            if(URL_APPSCRIPT.includes("XXXXXXXXXXXX")) {
+                alert("Halo! Aplikasi web siap, silakan pasang URL AppScript Anda di dalam kode untuk mulai menyimpan data.");
+                return;
+            }
+
+            try {
+                // 1. Ambil IP Address pembeli secara diam-diam lewat internet
+                const dapatkanIP = await fetch('https://api.ipify.org?format=json');
+                const dataIP = await dapatkanIP.json();
+                const ipPengunjung = dataIP.ip;
+
+                // 2. Kirim data paket dan IP pembeli ke Google Spreadsheet lewat AppScript
+                await fetch(URL_APPSCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors', // Menghindari masalah error CORS di Vercel/Browser
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        paket: namaPaket,
+                        ip: ipPengunjung
+                    })
+                });
+
+                // 3. Notifikasi Sukses yang ramah untuk user awam
+                alert("Terima kasih! Pembelian " + namaPaket + " Anda sedang dicatat oleh sistem aman kami.");
+            } catch (error) {
+                console.error("Gagal mencatat:", error);
+                alert("Koneksi sibuk, silakan klik tombol beli sekali lagi ya kak!");
+            }
         }
     </script>
 </body>
